@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Send a message to Benji</title>
+    <title>Send a message to me</title>
+    <meta name="viewport" content="width=420">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="css/base.css">
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -16,11 +19,18 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
     <script defer src="lib/js/index.js"></script>
-
-    <h1>Send me a message!</h1>
-    <form onsubmit="return sendPrint(document.getElementById('requestText').value)" >
-      <input type="text" id="requestText">
-      <input type="submit">
-    </form>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row h">
+      <h1>Send me a message!</h1>
+      <form onsubmit="return sendPrint(document.getElementById('requestText').value)" >
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Message" aria-label="message" aria-describedby="button-addon2" id="requestText">
+          <input class="btn btn-outline-secondary" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
   </body>
 </html>
